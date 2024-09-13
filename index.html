@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -12,23 +14,27 @@
             ★
             <p>Have a question? We can Help</p>
             <div class="points">
-                <div class="point"></div>
-                <div class="point"></div>
-                <div class="point"></div>
+                <a href="#" class="point" data-slide="0"></a>
+                <a href="#" class="point" data-slide="1"></a>
+                <a href="#" class="point" data-slide="2"></a>
             </div>
         </div>
         <div class="row row2">
             <div class="img">
+                <img id="slider-image" src="img/7f3d04e1b27af60b6d151cb6cff5921d@2x.png" alt="Slider Image">
                 <div class="imgtext">
-                    <div class="text1">
-                        WHAT TO WEAR
-                    </div>
-                    <div class="text2">
-                        Right Now
-                    </div>
+                    <div id="slider-text1" class="text1">WHAT TO WEAR</div>
+                    <div id="slider-text2" class="text2">Right Now</div>
                     <div class="text3">
-                        <a href="">Shop new arrivals</a>
+                        <a id="slider-link" href="#">Shop new arrivals</a>
                     </div>
+                </div>
+            </div>
+            <div class="responsivetext">
+                <div id="slider-textresp1" class="text1">WHAT TO WEAR</div>
+                <div id="slider-textresp2" class="text2">Right Now</div>
+                <div class="text3">
+                    <a id="slider-linkresp" href="#">Shop new arrivals</a>
                 </div>
             </div>
         </div>
@@ -39,10 +45,14 @@
                 </div>
                 <div class="rightfield">
                     <div class="rightfieldlinks">
-                        <a href="">Shop Women</a>
-                        <a href="">Shop Men</a>
-                        <a href="">Shop Girls</a>
-                        <a href="">Shop Boys</a>
+                        <div class="links1">
+                            <a href="">Shop Women</a>
+                            <a href="">Shop Men</a>
+                        </div>
+                        <div class="links2">
+                            <a href="">Shop Girls</a>
+                            <a href="">Shop Boys</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -50,7 +60,7 @@
         <div class="posts">
             <div class="row row4">
                 <div class="row4cont">
-                    <div class="post1">
+                    <div class="post post1">
                         <div class="postimg">
                             <img src="img/7a4e9d1504404d85fbe6756cd3043f76@2x.png" alt="">
                         </div>
@@ -59,7 +69,7 @@
                             <a href="">Shop the prefect fade</a>
                         </div>
                     </div>
-                    <div class="post2">
+                    <div class="post post2">
                         <div class="postimg">
                             <img src="img/7381226ebd2ebd3e6e0d42b9abb61ea9@2x.png" alt="">
                         </div>
@@ -72,16 +82,16 @@
             </div>
             <div class="row row5">
                 <div class="row5cont">
-                    <div class="post1">
+                    <div class="post post1">
                         <div class="postimg">
-                            <img src="img/68a96afa462d3ed38f2b4c70362fb13e.png" alt="">
+                            <img src="img/68a96afa462d3ed38f2b4c70362fb13e@2x.png" alt="">
                         </div>
                         <div class="posttext">
                             <p>The new grament-dyed collection</p>
                             <a href="">Shop the prefect fade</a>
                         </div>
                     </div>
-                    <div class="post2">
+                    <div class="post post2">
                         <div class="postimg">
                             <img src="img/0b8dae86c26166db7902b0acc1d1d7ed@2x.png" alt="">
                         </div>
@@ -96,8 +106,9 @@
         <div class="row row6">
             <div class="topfield">
                 <p>More You need to see</p>
-            </div>
-            <div class="bottomfield">
+            </div>   
+
+            <div class="bottomfield owl-carousel">
                 <div class="bottomfieldpost bottomfieldpost1">
                     <img src="img/081767283e1f218a53234fcb0497deaa.png" alt="">
                     <a href="">Shop Women's Sweaters</a>
@@ -111,19 +122,89 @@
                     <a href="">Shop Women's Sweaters</a>
                 </div>
                 <div class="bottomfieldpost bottomfieldpost4">
-                    <img src="img/697c2ed6a66ed7e00b2ec5a5cb660618@2x.png" alt="">
+                    <img src="img/697c2ed6a66ed7e00b2ec5a5cb660618.png" alt="">
                     <a href="">Shop Women's Sweaters</a>
                 </div>
                 <div class="bottomfieldpost bottomfieldpost5">
-                    <img src="img/68ee77e06d950c3b4a7fb16c1eb8186a@2x.png" alt="">
+                    <img src="img/68ee77e06d950c3b4a7fb16c1eb8186a.png" alt="">
                     <a href="">Shop Women's Sweaters</a>
                 </div>
                 <div class="bottomfieldpost bottomfieldpost6">
-                    <img src="img/00147730d97be75f93e9b130fb174bd4@2x.png" alt="">
+                    <img src="img/00147730d97be75f93e9b130fb174bd4.png" alt="">
                     <a href="">Shop Women's Sweaters</a>
                 </div>
             </div>
         </div>
     </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            items:4,
+            loop:true,
+            margin:10,
+            lazyLoad: true,
+            autoplay:true,
+            autoplayTimeout:2000,
+            autoplayHoverPause:true
+        });
+        $('.play').on('click',function(){
+            owl.trigger('play.owl.autoplay',[1000])
+        })
+        $('.stop').on('click',function(){
+            owl.trigger('stop.owl.autoplay')
+        })
+    </script>
+    <script>
+        const slides = [
+        {
+            image: "img/7f3d04e1b27af60b6d151cb6cff5921d@2x.png",
+            text1: "WHAT TO WEAR",
+            text2: "Right Now",
+            link: "#"
+        },
+        {
+            image: "img/7f3d04e1b27af60b6d151cb6cff5921d@2x.png",
+            text1: "SEASON ESSENTIALS",
+            text2: "Shop the Trends",
+            link: "#"
+        },
+        {
+            image: "img/7f3d04e1b27af60b6d151cb6cff5921d@2x.png",
+            text1: "STYLE UPGRADE",
+            text2: "Fresh Arrivals",
+            link: "#"
+        }
+        ];
+            let currentIndex = 0;
+
+            const updateSlide = (index) => {
+                document.getElementById("slider-image").src = slides[index].image;
+                document.getElementById("slider-text1").textContent = slides[index].text1;
+                document.getElementById("slider-text2").textContent = slides[index].text2;
+                document.getElementById("slider-link").href = slides[index].link;
+                document.querySelectorAll(".point").forEach(p => p.classList.remove("active"));
+                document.querySelectorAll(".point")[index].classList.add("active");
+            };
+
+            document.querySelectorAll(".point").forEach((p, i) => {
+                p.addEventListener("click", () => updateSlide(i));
+            });
+
+            const handleSwipe = (startX, endX) => {
+                if (startX > endX + 50) currentIndex = (currentIndex + 1) % slides.length;
+                else if (startX < endX - 50) currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                updateSlide(currentIndex);
+            };
+
+            let startX = 0;
+            document.getElementById("slider-image").addEventListener("touchstart", e => startX = e.touches[0].clientX);
+            document.getElementById("slider-image").addEventListener("touchend", e => handleSwipe(startX, e.changedTouches[0].clientX));
+
+            updateSlide(0);
+
+    </script>
 </body>
 </html>
