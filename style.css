@@ -130,6 +130,8 @@ body > div > div.row.row1 > div >a:nth-child(1) > div{
 .bottomfieldpost{
     display: flex;
     flex-direction: column;
+    align-items: center;
+
 }
 .links1{
     width: 50%;
