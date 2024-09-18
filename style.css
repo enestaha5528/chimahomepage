@@ -2,7 +2,6 @@
 
 .container{
     width: 100%;
-    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,13 +18,15 @@ a{
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-top: 15px;
 }
 .row1{
     font-size: 15px;
-    height: 78px;
     border: 1px solid #d8d8d8;
     line-height: 1;
+    padding-bottom: 1%;
+}
+.row5{
+    margin-top: 3vh;
 }
 body > div > div.row.row1 > div >a:nth-child(1) > div{
     background-color: black;
@@ -456,12 +457,11 @@ body > div > div.row.row1 > div >a:nth-child(1) > div{
         overflow: visible;
     }
     .points{
-        width:10%;
+        width:4%;
     }
     .imgtext{
         height: 673px;
         color: #3D3D3D;
-        display: ;
     }
     .row4cont,.row5cont{
         flex-direction: row;
@@ -538,6 +538,9 @@ body > div > div.row.row1 > div >a:nth-child(1) > div{
         width: 100%;
         object-fit: cover;
     }
-
+    .owl-carousel .owl-item img {
+        display: block;
+        width: 50%;
+    }
 
 }
