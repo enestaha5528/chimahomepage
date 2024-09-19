@@ -1,7 +1,10 @@
 @import url(https://db.onlinewebfonts.com/c/0b8ce836c5fa6b70d00bef263ee25a78?family=MangoSans-Bold);
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
 .container{
     width: 100%;
-    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,48 +13,94 @@
 p{
     color: #3D3D3D;
 }
+button{
+    color: #3D3D3D;
+}
 a{
-    color: #222222;
+    color: #3D3D3D;
 }
 .row{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
 }
+.rightfieldlinks button{
+    background-color: transparent;
+    padding-bottom: 10px;
+    border: none;
+    border-bottom: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+}
+
 .row1{
     font-size: 15px;
-    height: 78px;
     border: 1px solid #d8d8d8;
     line-height: 1;
+    padding-bottom: 1%;
 }
-body > div > div.row.row1 > div > div:nth-child(1){
+.row5{
+    margin-top: 3vh;
+}
+.tablinks{
+    transition: 0.5s;
+}
+.tablinks:hover{
+    color: black !important;
+}
+.posttext:hover p,.posttext:hover a{
+    color: black;
+}
+body > div > div.row.row1 > div >a:nth-child(1) > div{
     background-color: black;
 }
-.point{
-    width: 10px;
-    height: 10px;
-    border-radius: 10px;
-    background-color: #d8d8d8;
+.point {
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    border: 0px;
+    background-color: #cecece;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.point:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+    animation: animasyon;
+}
+
+.point:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transform: translateY(1px);
+}
+
+.point.active {
+    background-color: #000000;
+    box-shadow: 0 6px 9px rgba(0, 0, 0, 0.9);
 }
 .points{
     display: flex;
-    width: 2%;
+    width: 2.5%;
     align-items: center;
     justify-content: space-between;
 }
-
 .img{
-    background-image: url(img/7f3d04e1b27af60b6d151cb6cff5921d@2x.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 1392px;
-    height: 673px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.row2 img{
+   width: 70%;
 }
 .imgtext{
-    width: 100%;
-    height: 673px;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,43 +126,65 @@ body > div > div.row.row1 > div > div:nth-child(1){
     align-items: center;
     justify-content: space-between;
     width: 45%;
+    padding-bottom: 20px;
 }
 .rightfield{
     width: 60%;
 }
 .rightfieldlinks{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+}
+#shopwomenbutton{
+    border-bottom: 1px solid black;
 }
 .row4cont{
     display: flex;
-    width: 65%;
+    width: 62%;
     flex-direction: row;
     justify-content: space-between;
 }
 .postimg img{
     width: 576px;
-    height: 721px;
 }
 .posttext p{
     font-size: 22px;
 }
 .row5cont{
     display: flex;
-    width: 65%;
+    width: 62%;
     flex-direction: row;
     justify-content: space-between;
 }
+@keyframes animasyon{
+    from{opacity: 0;};
+    to{
+        opacity: 1;
+    }
+}
 .posts{
-    height: 200vh;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    animation: animasyon 1s;
 }
+.postwomen{
+    display: flex;
+}
+.active{
+     display: flex; 
+}
+
 .topfield p{
     color: black;
     font-size: 27px;
+}
+.shopwomen{
+    display: flex;
+}
+.links1 a,.links2 a{
+    text-decoration: none;
 }
 .bottomfield{
     display: flex;
@@ -124,8 +195,438 @@ body > div > div.row.row1 > div > div:nth-child(1){
 .bottomfieldpost{
     display: flex;
     flex-direction: column;
+    align-items: center;
+
 }
-.bottomfieldpost img{
-    width: 223px;
-    height: 223px;
+.links1{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;}
+.links2{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+.responsivetext{
+    display: none;
+}
+.bottomfield {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.no-js .owl-carousel, .owl-carousel.owl-loaded{
+    width: 95%;
+}
+.headtext{
+    animation: animasyon 1s;
+
+}
+@media(max-width: 767px){
+    .row2{
+        overflow: hidden;
+    }
+ .row2 img{
+        object-fit: cover;
+        width: 200%;
+        overflow: visible;
+        padding-left: 100%;
+    }
+.points{
+    width:10%;
+}
+.rightfieldlinks button{
+    width: 50%;
+    font-size: 15px;
+}
+.posttext{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.posttext p{
+    font-size: 20px;
+}
+.imgtext{
+    height: 673px;
+    color: #3D3D3D;
+
+}
+.row4cont,.row5cont{
+    flex-direction: column;
+    width: 100%;
+}
+
+.text2{
+    color: black;
+    font-size: 50px;
+    line-height: 2;
+}
+.postimg{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.postimg img{
+    width: 95%;
+    object-fit: cover;
+
+}
+.row3cont{
+    width: 100%;
+    background-color: #F2F2F2 ;
+    flex-direction: column;
+    font-size: 20px;
+}
+.row6{
+    clear: both;
+    overflow: hidden;
+}
+.links1,.links2{
+    flex-direction: column;
+}
+.rightfieldlinks{
+    display: flex;
+    flex-wrap: wrap;
+    width: 81%;
+}
+.rightfield {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgtext{
+    display: none;
+}
+.responsivetext{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.post{
+    margin-top: 20px;
+}
+.bottomfield {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    width: 95%;
+}
+
+.bottomfieldpost {
+    flex: 0 0 auto; 
+    margin-right: 15px;
+    width: 95%;
+    align-items: center;
+}
+
+.bottomfieldpost img {
+    width: 100%;
+    object-fit: cover;
+}
+.no-js .owl-carousel, .owl-carousel.owl-loaded {
+    display: block;
+    width: 95% !important;
+}
+}
+@media (min-width: 767px) and (max-width: 991px) {
+    .row2 img{
+        object-fit: cover;
+        width: 100%;
+        overflow: visible;
+    }
+    .points{
+        width:10%;
+    }
+    .imgtext{
+        height: 673px;
+        color: #3D3D3D;
+    
+    }
+    .row4cont,.row5cont{
+        flex-direction: column;
+        width: 70%;
+    }
+    .posttext{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .text2{
+        color: black;
+        font-size: 50px;
+        line-height: 2;
+    }
+    .postimg{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .postimg img{
+        width: 95%;
+        object-fit: cover;
+    
+    }
+    .row3cont{
+        width: 100%;
+        background-color: #F2F2F2 ;
+        flex-direction: column;
+        font-size: 20px;
+    }
+    .row6{
+        clear: both;
+        overflow: hidden;
+    }
+    .links2{
+        width: 50%;
+    }
+    .links1,.links2{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .rightfieldlinks{
+        width: 35%;
+}
+    .rightfield {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .imgtext{
+        display: none;
+    }
+    .responsivetext{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .post{
+        margin-top: 20px;
+    }
+    .bottomfield{
+        display: flex;
+        width: 90%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .bottomfieldpost{
+        display: flex;
+        flex-direction: column;
+    }
+    .bottomfieldpost img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .no-js .owl-carousel, .owl-carousel.owl-loaded {
+        display: block;
+        width: 95% !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .row2 img{
+        object-fit: cover;
+        width: 100%;
+        overflow: visible;
+    }
+    .points{
+        width:10%;
+    }
+    .imgtext{
+        height: 673px;
+        color: #3D3D3D;
+    
+    }
+    .row4cont,.row5cont{
+        flex-direction: row;
+        width: 70%;
+    }
+    
+    .text2{
+        color: black;
+        font-size: 50px;
+        line-height: 2;
+    }
+    .postimg{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .postimg img{
+        width: 95%;
+        object-fit: cover;
+    
+    }
+    .row3cont{
+        width: 100%;
+        background-color: #F2F2F2 ;
+        flex-direction: column;
+        font-size: 20px;
+    }
+    .row6{
+        clear: both;
+        overflow: hidden;
+    }
+    .links2{
+        width: 50%;
+    }
+    .links1,.links2{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .rightfieldlinks{
+        width: 35%;
+}
+    .rightfield {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .imgtext{
+        display: none;
+    }
+    .responsivetext{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .post{
+        margin-top: 20px;
+    }
+    .bottomfield{
+        display: flex;
+        width: 90%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .bottomfieldpost{
+        display: flex;
+        flex-direction: column;
+    }
+    .bottomfieldpost img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .no-js .owl-carousel, .owl-carousel.owl-loaded {
+        display: block;
+        width: 95% !important;
+    }
+}
+@media (min-width: 1199px) and (max-width: 1680px) {
+    .row2 img{
+        object-fit: cover;
+        width: 100%;
+        overflow: visible;
+    }
+    .points{
+        width:4%;
+    }
+    .imgtext{
+        height: 673px;
+        color: #3D3D3D;
+    }
+    .row4cont,.row5cont{
+        flex-direction: row;
+        width: 70%;
+    }
+    
+    .text2{
+        color: black;
+        font-size: 50px;
+        line-height: 2;
+    }
+    .postimg{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .postimg img{
+        width: 95%;
+        object-fit: cover;
+    
+    }
+    .row3cont{
+        width: 100%;
+        background-color: #F2F2F2 ;
+        flex-direction: column;
+        font-size: 20px;
+    }
+    .row6{
+        clear: both;
+        overflow: hidden;
+    }
+    .links2{
+        width: 50%;
+    }
+    .links1,.links2{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .no-js .owl-carousel, .owl-carousel.owl-loaded {
+        display: block;
+        width: 95% !important;
+    }
+    .rightfieldlinks{
+        width: 35%;
+}
+    .rightfield {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .imgtext{
+        display: flex;
+    }
+    .responsivetext{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .post{
+        margin-top: 20px;
+    }
+    .bottomfield{
+        display: flex;
+        width: 90%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .bottomfieldpost{
+        display: flex;
+        flex-direction: column;
+    }
+    .bottomfieldpost img {
+        width: 100%;
+        object-fit: cover;
+    }
+    .owl-carousel .owl-item img {
+        display: block;
+        width: 50%;
+    }
+
 }

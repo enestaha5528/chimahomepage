@@ -1,56 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <title>Chima Home Page</title>
 </head>
+
 <body>
     <div class="container">
         <div class="row row1">
             ★
-            <p>Have a question? We can Help</p>
+            <p id="headtext">Have a question? We can Help</p>
             <div class="points">
-                <div class="point"></div>
-                <div class="point"></div>
-                <div class="point"></div>
+                <button class="point" data-slide="0"></button>
+                <button class="point" data-slide="1"></button>
+                <button class="point" data-slide="2"></button>
             </div>
         </div>
         <div class="row row2">
-            <div class="img">
+                <img id="slider-image" src="img/7f3d04e1b27af60b6d151cb6cff5921d@2x.png" alt="Slider Image">
                 <div class="imgtext">
-                    <div class="text1">
-                        WHAT TO WEAR
-                    </div>
-                    <div class="text2">
-                        Right Now
-                    </div>
+                    <div id="slider-text1" class="text1">WHAT TO WEAR</div>
+                    <div id="slider-text2" class="text2">Right Now</div>
                     <div class="text3">
-                        <a href="">Shop new arrivals</a>
+                        <a id="slider-link" href="#">Shop new arrivals</a>
+                    </div>
+                </div>
+            <div class="responsivetext">
+                <div id="slider-textresp1" class="text1">WHAT TO WEAR</div>
+                <div id="slider-textresp2" class="text2">Right Now</div>
+                <div class="text3">
+                    <a id="slider-linkresp" href="#">Shop new arrivals</a>
+                </div>
+            </div>
+        </div>
+        <div class="section-3">
+            <div class="row row3">
+                <div class="row3cont">
+                    <div class="leftfield">
+                        <p>Shop New Arrivals</p>
+                    </div>
+                    <div class="rightfield">
+                        <div class="rightfieldlinks">
+                            <button onclick="slider('shopwomen','shopwomenbutton')" class="tablinks"
+                                id="shopwomenbutton">Shop Women</button>
+                            <button onclick="slider('shopmen','shopmenbutton')" class="tablinks" id="shopmenbutton">Shop
+                                Men</button>
+                            <button onclick="slider('shopgirls','shopgirlsbutton')" class="tablinks"
+                                id="shopgirlsbutton">Shop Girls</button>
+                            <button onclick="slider('shopboys','shopboysbutton')" class="tablinks"
+                                id="shopboysbutton">Shop Boys</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row row3">
-            <div class="row3cont">
-                <div class="leftfield">
-                    <p>Shop New Arrivals</p>
-                </div>
-                <div class="rightfield">
-                    <div class="rightfieldlinks">
-                        <a href="">Shop Women</a>
-                        <a href="">Shop Men</a>
-                        <a href="">Shop Girls</a>
-                        <a href="">Shop Boys</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="posts">
+        <div class="posts shopwomen" id="shopwomen">
             <div class="row row4">
                 <div class="row4cont">
-                    <div class="post1">
+                    <div class="post post1">
                         <div class="postimg">
                             <img src="img/7a4e9d1504404d85fbe6756cd3043f76@2x.png" alt="">
                         </div>
@@ -59,7 +71,7 @@
                             <a href="">Shop the prefect fade</a>
                         </div>
                     </div>
-                    <div class="post2">
+                    <div class="post post2">
                         <div class="postimg">
                             <img src="img/7381226ebd2ebd3e6e0d42b9abb61ea9@2x.png" alt="">
                         </div>
@@ -72,16 +84,156 @@
             </div>
             <div class="row row5">
                 <div class="row5cont">
-                    <div class="post1">
+                    <div class="post post1">
                         <div class="postimg">
-                            <img src="img/68a96afa462d3ed38f2b4c70362fb13e.png" alt="">
+                            <img src="img/68a96afa462d3ed38f2b4c70362fb13e@2x.png" alt="">
                         </div>
                         <div class="posttext">
                             <p>The new grament-dyed collection</p>
                             <a href="">Shop the prefect fade</a>
                         </div>
                     </div>
-                    <div class="post2">
+                    <div class="post post2">
+                        <div class="postimg">
+                            <img src="img/0b8dae86c26166db7902b0acc1d1d7ed@2x.png" alt="">
+                        </div>
+                        <div class="posttext">
+                            <p>The new grament-dyed collection</p>
+                            <a href="">Shop the prefect fade</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="posts shopmen" id="shopmen">
+            <div class="row row4">
+                <div class="row4cont">
+                    <div class="post post1">
+                        <div class="postimg">
+                            <img src="img/7381226ebd2ebd3e6e0d42b9abb61ea9@2x.png" alt="">
+                        </div>
+                        <div class="posttext">
+                            <p>The new grament-dyed collection</p>
+                            <a href="">Shop the prefect fade</a>
+                        </div>
+                    </div>
+                    <div class="post post2">
+                        <div class="postimg">
+                            <img src="img/68a96afa462d3ed38f2b4c70362fb13e@2x.png" alt="">
+                        </div>
+                        <div class="posttext">
+                            <p>The new grament-dyed collection</p>
+                            <a href="">Shop the prefect fade</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row5">
+                <div class="row5cont">
+                    <div class="post post1">
+                        <div class="postimg">
+                            <img src="img/7a4e9d1504404d85fbe6756cd3043f76@2x.png" alt="">
+                        </div>
+                        <div class="posttext">
+                            <p>The new grament-dyed collection</p>
+                            <a href="">Shop the prefect fade</a>
+                        </div>
+                    </div>
+                    <div class="post post2">
+                        <div class="postimg">
+                            <img src="img/0b8dae86c26166db7902b0acc1d1d7ed@2x.png" alt="">
+                        </div>
+                        <div class="posttext">
+                            <p>The new grament-dyed collection</p>
+                            <a href="">Shop the prefect fade</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="posts shopgirls" id="shopgirls">
+            <div class="row row4">
+                <div class="row4cont">
+                    <div class="post post1">
+                        <div class="postimg">
+                            <img src="img/7381226ebd2ebd3e6e0d42b9abb61ea9@2x.png" alt="">
+                        </div>
+                        <div class="posttext">
+                            <p>The new grament-dyed collection</p>
+                            <a href="">Shop the prefect fade</a>
+                        </div>
+                    </div>
+                    <div class="post post2">
+                        <div class="postimg">
+                            <img src="img/0b8dae86c26166db7902b0acc1d1d7ed@2x.png" alt="">
+                        </div>
+                        <div class="posttext">
+                            <p>The new grament-dyed collection</p>
+                            <a href="">Shop the prefect fade</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row5">
+                <div class="row5cont">
+                    <div class="post post1">
+                        <div class="postimg">
+                            <img src="img/7a4e9d1504404d85fbe6756cd3043f76@2x.png" alt="">
+                        </div>
+                        <div class="posttext">
+                            <p>The new grament-dyed collection</p>
+                            <a href="">Shop the prefect fade</a>
+                        </div>
+                    </div>
+                    <div class="post post2">
+                        <div class="postimg">
+                            <img src="img/68a96afa462d3ed38f2b4c70362fb13e@2x.png" alt="">
+                        </div>
+                        <div class="posttext">
+                            <p>The new grament-dyed collection</p>
+                            <a href="">Shop the prefect fade</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="posts shopboys" id="shopboys">
+            <div class="row row4">
+                <div class="row4cont">
+                    <div class="post post1">
+                        <div class="postimg">
+                            <img src="img/7a4e9d1504404d85fbe6756cd3043f76@2x.png" alt="">
+                        </div>
+                        <div class="posttext">
+                            <p>The new grament-dyed collection</p>
+                            <a href="">Shop the prefect fade</a>
+                        </div>
+                    </div>
+                    <div class="post post2">
+                        <div class="postimg">
+                            <img src="img/7381226ebd2ebd3e6e0d42b9abb61ea9@2x.png" alt="">
+                        </div>
+                        <div class="posttext">
+                            <p>The new grament-dyed collection</p>
+                            <a href="">Shop the prefect fade</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row row5">
+                <div class="row5cont">
+                    <div class="post post1">
+                        <div class="postimg">
+                            <img src="img/68a96afa462d3ed38f2b4c70362fb13e@2x.png" alt="">
+                        </div>
+                        <div class="posttext">
+                            <p>The new grament-dyed collection</p>
+                            <a href="">Shop the prefect fade</a>
+                        </div>
+                    </div>
+                    <div class="post post2">
                         <div class="postimg">
                             <img src="img/0b8dae86c26166db7902b0acc1d1d7ed@2x.png" alt="">
                         </div>
@@ -97,7 +249,8 @@
             <div class="topfield">
                 <p>More You need to see</p>
             </div>
-            <div class="bottomfield">
+
+            <div class="bottomfield owl-carousel">
                 <div class="bottomfieldpost bottomfieldpost1">
                     <img src="img/081767283e1f218a53234fcb0497deaa.png" alt="">
                     <a href="">Shop Women's Sweaters</a>
@@ -111,19 +264,96 @@
                     <a href="">Shop Women's Sweaters</a>
                 </div>
                 <div class="bottomfieldpost bottomfieldpost4">
-                    <img src="img/697c2ed6a66ed7e00b2ec5a5cb660618@2x.png" alt="">
+                    <img src="img/697c2ed6a66ed7e00b2ec5a5cb660618.png" alt="">
                     <a href="">Shop Women's Sweaters</a>
                 </div>
                 <div class="bottomfieldpost bottomfieldpost5">
-                    <img src="img/68ee77e06d950c3b4a7fb16c1eb8186a@2x.png" alt="">
+                    <img src="img/68ee77e06d950c3b4a7fb16c1eb8186a.png" alt="">
                     <a href="">Shop Women's Sweaters</a>
                 </div>
                 <div class="bottomfieldpost bottomfieldpost6">
-                    <img src="img/00147730d97be75f93e9b130fb174bd4@2x.png" alt="">
+                    <img src="img/00147730d97be75f93e9b130fb174bd4.png" alt="">
                     <a href="">Shop Women's Sweaters</a>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            items: 4,
+            loop: true,
+            margin: 10,
+            lazyLoad: true,
+            autoplay: true,
+            autoplayTimeout: 1500,
+            autoplayHoverPause: true
+        });
+        $('.play').on('click', function () {
+            owl.trigger('play.owl.autoplay', [1000])
+        })
+        $('.stop').on('click', function () {
+            owl.trigger('stop.owl.autoplay')
+        })
+    </script>
+    <script>
+        const slides = [
+            {
+                text1: "Have a question? We can Help",
+            },
+            {
+                text1: "Need Assistance? We're Here to Help",
+            },
+            {
+                text1: "Got a Question? We're Ready to Assist You",
+            }
+        ];
+        let currentIndex = 0;
+
+        const updateSlide = (index) => {
+            document.getElementById("headtext").textContent = slides[index].text1;
+            document.querySelectorAll(".point").forEach(p => p.classList.remove("active"));
+            document.querySelectorAll(".point")[index].classList.add("active");
+        };
+
+        document.querySelectorAll(".point").forEach((p, i) => {
+            p.addEventListener("click", () => updateSlide(i));
+        });
+
+        const handleSwipe = (startX, endX) => {
+            if (startX > endX + 50) currentIndex = (currentIndex + 1) % slides.length;
+            else if (startX < endX - 50) currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlide(currentIndex);
+        };
+
+        let startX = 0;
+        document.getElementById("slider-image").addEventListener("touchstart", e => startX = e.touches[0].clientX);
+        document.getElementById("slider-image").addEventListener("touchend", e => handleSwipe(startX, e.changedTouches[0].clientX));
+
+        updateSlide(0);
+
+        function slider(tabId, buttonid) {
+            document.querySelectorAll('.posts').forEach(section => {
+                section.style.display = 'none';
+                section.classList.remove("activeTab")
+            });
+            document.getElementById(tabId).style.display = 'flex';
+            document.getElementById(tabId).classList.add("activeTab")
+            document.querySelectorAll('.tablinks').forEach(link => {
+                link.style.borderBottom = 'none';
+                link.style.color = '#3D3D3D';
+
+            });
+
+            document.getElementById(buttonid).style.borderBottom = '1px solid black';
+            document.getElementById(buttonid).style.color = 'black';
+        }
+
+
+    </script>
 </body>
+
 </html>
