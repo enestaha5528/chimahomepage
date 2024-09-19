@@ -54,7 +54,11 @@
 
 .owl-carousel .owl-item img {
     display: block;
+<<<<<<< HEAD
     /* width:100%; */
+=======
+    width: 50%
+>>>>>>> 52805256dd020223b481e532906a84643eb43d29
 }
 
 .owl-carousel .owl-dots.disabled,.owl-carousel .owl-nav.disabled {
@@ -62,8 +66,12 @@
 }
 
 .no-js .owl-carousel,.owl-carousel.owl-loaded {
+<<<<<<< HEAD
     display: block;
     width: 65%;
+=======
+    display: block
+>>>>>>> 52805256dd020223b481e532906a84643eb43d29
 }
 
 .owl-carousel .owl-dot,.owl-carousel .owl-nav .owl-next,.owl-carousel .owl-nav .owl-prev {
